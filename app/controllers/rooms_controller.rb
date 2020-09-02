@@ -25,7 +25,7 @@ end
 private
 
   def room_params
-    params.require(:room).permit(:name, user_ids:[])
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 
 
